@@ -82,7 +82,7 @@ int		main(int argc, char **argv)
 	int i = 0;
 	char c = 0;
 	float f = 0;
-	std::string s = argv[1];
+	std::string s;
 	extern int errno;
 	char *endptr;
 	errno = 0;
@@ -92,7 +92,7 @@ int		main(int argc, char **argv)
 		std::cout << "Wrong amount of args yo... :0" << std::endl;
 		return (1);
 	}
-
+	s = argv[1];
 	w = strtod(s.c_str(), &endptr);
 	if (errno != 0)
 		return (false);
